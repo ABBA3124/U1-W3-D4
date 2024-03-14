@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tombola</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1>Tombola</h1>
+      </div>
+      <div class="container">
+        <div id="mainTable" class="table"></div>
+        <button id="extractionButton">Estrai Numero</button>
+        <button id="refreshButton">Nuova Partita</button>
+        <form id="numPlayerTablesForm">
+          <label for="numPlayerTables">Numero di tabelline giocatore:</label>
+          <input
+            type="number"
+            id="numPlayerTables"
+            name="numPlayerTables"
+            min="1"
+            max="5"
+            value="1"
+          />
+          <button type="submit">Genera tabelline</button>
+        </form>
+        <div id="playerTablesContainer"></div>
+      </div>
+    </main>
+    <script src="U1-W3-D4.js"></script>
+  </body>
+</html>

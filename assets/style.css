@@ -1,0 +1,89 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.container {
+  max-width: 981px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 40px;
+  margin: 5px;
+  font-size: 22px;
+}
+
+#extractionButton {
+  margin-top: 30px;
+  font-size: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+#refreshButton {
+  margin-top: 10px;
+  font-size: 15px;
+  background-color: #008cba;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+#numPlayerTablesForm button {
+  font-size: 15px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+#extractionButton:hover,
+#refreshButton:hover,
+#numPlayerTablesForm button[type="submit"]:hover {
+  background-color: #54eb0e;
+}
+
+.highlight {
+  background-color: #ff0;
+}
+
+.playerTable {
+  margin-top: 20px;
+}
