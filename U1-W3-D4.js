@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const cellsPlayer = []
   const extractedNumbers = new Set()
 
-  // Funzione per creare una cella di tabella
+  // Funzione per creare una "cella" (div) dentro la tabella (div con dentro classe e id table)
   function createCell(textContent) {
     const cell = document.createElement("div")
     cell.textContent = textContent
@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
     return cell
   }
 
-  // Funzione per creare una tabellina con numeri casuali da 1 a 76
+  // Funzione per creare una tabellina per gli utenti con numeri casuali da 1 a 76
   function createPlayerTable() {
     const playerTable = document.createElement("div")
     playerTable.classList.add("table", "playerTable")
     const cells = []
 
-    // Genera 24 numeri casuali unici
+    // Genera 24 numeri casuali unici alle tabelline degli utenti
     const uniqueNumbers = new Set()
     while (uniqueNumbers.size < 24) {
       uniqueNumbers.add(Math.floor(Math.random() * 76) + 1)
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   numPlayerTablesForm.addEventListener("submit", function (event) {
     event.preventDefault()
     const numTables = parseInt(numPlayerTablesInput.value)
-    playerTablesContainer.innerHTML = "" // Cancella le tabelline precedenti
+    playerTablesContainer.innerHTML = "" 
     for (let i = 0; i < numTables; i++) {
       const { playerTable, cells } = createPlayerTable()
       playerTablesContainer.appendChild(playerTable)
@@ -78,10 +78,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Gestione del click sul bottone "Nuova Partita"
   refreshButton.addEventListener("click", function () {
-    location.reload() // Ricarica la pagina per una nuova partita
+    location.reload() 
   })
 
-  // Crea le celle del tabellone principale
+  // Crea le celle del tabellone main
   for (let i = 1; i <= 76; i++) {
     const cell = createCell(i)
     cellsMain.push(cell)
